@@ -110,7 +110,7 @@ new Vue({
     searchItems() {
       window.location.href = "#"+ 'filter-div';
       squery = document.getElementById('search-text').value;
-      let searchData = self.projectData.filter(items => (items.first_name.toLowerCase().includes(squery.toLowerCase()) || items.last_name.toLowerCase().includes(squery.toLowerCase()) ||items.affiliation.toLowerCase().includes(squery.toLowerCase())));
+      let searchData = self.projectData.filter(items => (items.title.toLowerCase().includes(squery.toLowerCase()) || items.description.toLowerCase().includes(squery.toLowerCase())));
       self.filterData = searchData;
       this.updateNumbers(self.filterData);
     },
