@@ -177,7 +177,7 @@ new Vue({
       this.updateNumbers(self.filterData);
     },
     updateNumbers(filterData){
-      window.location.href = "#"+ 'filter-div';
+
       self=this;
       self.naData = filterData.filter(items => items.region == "na");
       self.na_count = self.naData.length;
@@ -326,7 +326,7 @@ new Vue({
       }, {
         "latitude": 43,
         "longitude": 5,
-        "value": self.lac_count,
+        "value": self.eu_count,
         "title": "European\nUnion",
         "length": 100
       }, {
@@ -338,13 +338,13 @@ new Vue({
       }, {
         "latitude": -20,
         "longitude": 140,
-        "value": self.eu_count,
+        "value": self.eap_count,
         "title": "Oceania",
         "length": 100
       }, {
         "latitude": 40,
         "longitude": 95,
-        "value": self.eap_count,
+        "value": self.sa_count,
         "title": "Asia",
         "length": 80
       }];
