@@ -188,6 +188,7 @@ p.text-alert{
   color: var(--accent-color);
   font-weight: 600;
 }
+
 @media screen and (min-width: 320px) and (max-width: 768px){
   .alert-content{
     height: 30vh;
@@ -1426,5 +1427,35 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
   }
   .table-header > div:nth-child(3){
     display:none;
+  }
+}
+.expert-countries-mobile{
+  display:none
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+  .expert-countries{
+    display:none;
+  }
+  .expert-map{
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-only{
+    display:flex;
+    flex-direction: row;
+    text-align: left;
+  }
+  .expert-countries-mobile{
+    padding: 1rem;
+    display:block;
+    text-align: left;
+    justify-content: flex-start;
+  }
+  #chartdiv {
+    width: 100%;
+    height: 500px;
+    max-width:100%;
+    background-color: var(--secondary-color);
+    padding-bottom: 2rem;
   }
 }
