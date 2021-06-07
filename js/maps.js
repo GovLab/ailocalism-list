@@ -67,15 +67,14 @@ new Vue({
 
       js_region: [
         { code: '', name: 'All' },
-        { code: 'na', name: 'North America' },
-        { code: 'mena', name: 'Middle East and North Africa' },
-        { code: 'lac', name: 'Latin America and the Caribbean' },
-        { code: 'afr', name: 'Africa' },
-        { code: 'eu', name: 'Europe and Central Asia' },
         { code: 'eap', name: 'East Asia and Pacific' },
-        { code: 'sa', name: 'South Asia' },
+        { code: 'eu', name: 'Europe and Central Asia' },
+        { code: 'lac', name: 'Latin America and the Caribbean' },
+        { code: 'mena', name: 'Middle East and North Africa' },
+        { code: 'na', name: 'North America' },
         { code: 'ssa', name: 'Sub-Saharan Africa' },
-        { code: 'cct', name: 'Challenges and Conferences and Tools' },
+        { code: 'sa', name: 'South Asia' },
+        { code: 'cct', name: 'Global' },
       ],
 
       apiURL: 'https://directus.thegovlab.com/ai-localism',
@@ -318,34 +317,42 @@ new Vue({
         "title": "North\nAmerica",
         "length": 150
       }, {
-        "latitude": 0,
+        "latitude": 35,
         "longitude": 25,
         "value": self.mena_count,
-        "title": "Africa",
-        "length": 40
+        "title": "Middle East and North Africa",
+        "length": 30
       }, {
-        "latitude": 43,
-        "longitude": 5,
+        "latitude": 53,
+        "longitude": 35,
         "value": self.eu_count,
-        "title": "European\nUnion",
-        "length": 100
+        "title": "Europe and Central Asia",
+        "length": 60
       }, {
         "latitude": -20,
         "longitude": -60,
-        "value": self.afr_count,
-        "title": "South\nAmerica",
+        "value": self.lac_count,
+        "title": "Latin America and the Caribbean",
         "length": 100
       }, {
-        "latitude": -20,
+        "latitude": 10,
         "longitude": 140,
         "value": self.eap_count,
-        "title": "Oceania",
+        "title": "East Asia and Pacific",
         "length": 100
-      }, {
-        "latitude": 40,
-        "longitude": 95,
+      }, 
+      {
+        "latitude": -20,
+        "longitude": 25,
+        "value": self.ssa_count,
+        "title": "Sub-Saharan Africa",
+        "length": 30
+      }, 
+      {
+        "latitude": 20,
+        "longitude": 75,
         "value": self.sa_count,
-        "title": "Asia",
+        "title": "South Asia",
         "length": 80
       }];
     }
