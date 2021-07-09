@@ -242,6 +242,8 @@ new Vue({
       chart.maxZoomLevel = 0.75;
       chart.seriesContainer.draggable = false;
       chart.seriesContainer.resizable = false;
+      chart.chartContainer.wheelable = false;
+    
       // Create map polygon series
       var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
       polygonSeries.exclude = ["antarctica"];
