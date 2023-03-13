@@ -196,7 +196,31 @@ p.text-alert{
 .buttons > a{ 
 margin-top:10px;
 }
+.about-page{
+  padding: 2rem 12rem;
+}
+.about-page h4{
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+.about-page p strong{
+  color: var(--secondary-color);
+}
+.about-page ul{
+  line-height: 1.2;
+}
+.about-page li{
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.about-page li strong{
+  color: var(--secondary-color);
+}
 @media screen and (min-width: 320px) and (max-width: 768px){
+  .about-page{
+    padding: 2rem 1rem;
+  }
   .alert-content{
     height: 30vh;
     background-color: var(--grey9);

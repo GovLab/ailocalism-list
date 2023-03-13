@@ -83,6 +83,7 @@ new Vue({
 
   created: function created() {
     this.fetchMapExperts();
+    this.fetchAbout();
   },
   methods: {
     fetchMapExperts(){
@@ -103,6 +104,25 @@ new Vue({
         self.projectData = data.data;
         self.filterData = self.projectData;
         this.updateNumbers(self.filterData);
+      })
+        .catch(error => console.error(error));
+    },
+    fetchAbout(){
+      self = this;
+      const client = new DirectusSDK({
+        url: "https://directus.thegovlab.com/",
+        project: "ai-localism",
+        storage: window.localStorage
+      });
+
+      client.getItems(
+        'about',
+        {
+          fields: ['*.*']
+        }
+      ).then(data => {
+        console.log(data)
+        self.aboutData = data.data;
       })
         .catch(error => console.error(error));
     },
